@@ -13,14 +13,20 @@ var items = Array(
   '咖哩',
   '拉亞',
   '便利商店',
-  '泡麵'
+  '泡麵',
+  '減肥'
 );
 bot.on('message', function (event) {
   if (event.message.type = 'text') {
     var msg = event.message.text;
     var item = items[Math.floor(Math.random() * items.length)];
     if (msg == '吃啥') {
-      event.reply(['吃' + item + '吧']).then(function (data) { });
+      if (item == '減肥') {
+        event.reply(['還吃阿,減肥啦!']).then(function (data) { });
+      }
+      else {
+        event.reply(['吃' + item + '吧']).then(function (data) { });
+      }
     }
   }
 });
