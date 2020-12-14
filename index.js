@@ -3,8 +3,8 @@ var express = require('express');
 
 var bot = lintbot({
   channelId: channelId,
-  channelSecret: 'channelSecret',
-  channelAccessToken: 'channelAccessToken'
+  CHANNEL_SECRET: 'channelSecret',
+  CHANNEL_ACCESS_TOKEN: 'channelAccessToken'
 });
 
 var items = Array(
