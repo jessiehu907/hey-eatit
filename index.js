@@ -20,7 +20,7 @@ bot.on('message', function (event) {
     var msg = event.message.text;
     var item = items[Math.floor(Math.random() * items.length)];
     if (msg == '吃啥') {
-      event.reply(['吃', item, '吧']).then(function (data) { });
+      event.reply(['吃' + item + '吧']).then(function (data) { });
     }
   }
 });
