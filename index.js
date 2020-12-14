@@ -1,8 +1,8 @@
 var linebot = require('linebot');
 var express = require('express');
 
-var bot = lintbot({
-  channelId: channelId,
+var bot = linebot({
+  channelId: 1655375294,
   channelSecret: 'channelSecret',
   channelAccessToken: 'channelAccessToken'
 });
