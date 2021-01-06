@@ -21,38 +21,39 @@ var items = Array(
   '馬祖麵館'
 );
 
-var endWord = Array(
-  '吧',
-  '啦',
-  '阿',
-  '啊',
-  '呀',
-  '咩',
-  '齁',
-  '囉',
-  '嘛'
-);
+// var endWord = Array(
+//   '吧',
+//   '啦',
+//   '阿',
+//   '啊',
+//   '呀',
+//   '咩',
+//   '齁',
+//   '囉',
+//   '嘛'
+// );
 
-var marks = Array(
-  '!',
-  '~',
-  '!!',
-  '~~',
-  '..'
-);
+// var marks = Array(
+//   '!',
+//   '~',
+//   '!!',
+//   '~~',
+//   '..'
+// );
 
 bot.on('message', function (event) {
   if (event.message.type = 'text') {
     var msg = event.message.text;
     var item = items[Math.floor(Math.random() * items.length)];
-    var endWord = endWord[Math.floor(Math.random() * endWord.length)];
-    var marks = marks[Math.floor(Math.random() * marks.length)];
+    // var endWord = endWord[Math.floor(Math.random() * endWord.length)];
+    // var marks = marks[Math.floor(Math.random() * marks.length)];
     if (msg == '吃啥') {
       if (item == '減肥') {
         event.reply(['還吃阿,減肥啦!']).then(function (data) { });
       }
       else {
-        event.reply(['吃' + item + endWord + marks]).then(function (data) { });
+        event.reply(['吃' + item +'如何?']).then(function (data) { });
+        // event.reply(['吃' + item + endWord + marks]).then(function (data) { });
       }
     }
   }
